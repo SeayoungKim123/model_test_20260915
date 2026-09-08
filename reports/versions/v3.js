@@ -4,15 +4,15 @@
 window.QA_DATA = {
   meta: {
     env: "dev",
-    run_id: "RUN-20260908-1752-dev",
-    updated_at: "2026-09-08 18:12",
+    run_id: "RUN-20260908-1156-dev",
+    updated_at: "2026-09-08 12:05",
   },
 
   kpis: {
-    total_runs: 8,
-    runs_by_env: "dev 5 · stage 0 · prd 3",
+    total_runs: 4,
+    runs_by_env: "dev 3 · stage 0 · prd 1",
     pass_rate: 100,
-    pass: 3,
+    pass: 2,
     fail: 0,
     open_issues: 0,
     issues_breakdown: "없음",
@@ -20,7 +20,7 @@ window.QA_DATA = {
     tc_count: 30,
   },
 
-  // 전체 시나리오·TC 카탈로그 (scenarios/01,02,03 전체 30 TC) + 이번 회차(RUN-20260908-1752-dev, TC-09·TC-15·TC-28 단독 재실행) 결과 오버레이. 이번 회차에 실행되지 않은 TC 는 status "—".
+  // 전체 시나리오·TC 카탈로그 (scenarios/01,02,03 전체 30 TC) + 이번 회차(RUN-20260908-1156-dev, TC-09·TC-15 단독 재실행) 결과 오버레이. 이번 회차에 실행되지 않은 TC 는 status "—".
   scenarios: [
     {
       id: "01-매뉴얼에이전트-Q01-10",
@@ -36,9 +36,9 @@ window.QA_DATA = {
         { id: "TC-07", name: "일정 월간보기 섬네일 표시 항목 제어",        tag: "", status: "—" },
         { id: "TC-08", name: "결재선 외 열람부서 고정 설정",            tag: "", status: "—" },
         { id: "TC-09", name: "하이웍스 내 AI 모델 제공 범위",          tag: "", status: "PASS",
-          screenshots: ["RUN-20260908-1752-dev/screenshots/agent-cmp-dev-tc09-02-prompt.png", "RUN-20260908-1752-dev/screenshots/agent-cmp-dev-tc09-03-after.png"],
-          note: "모델 비공개 방침 답변, 특정모델명 미확인; 출처 인용·되물음 없음",
-          run_id: "RUN-20260908-1752-dev", duration: "27s", in_tokens: "46.9k", out_tokens: "835" },
+          screenshots: ["RUN-20260908-1156-dev/screenshots/agent-cmp-dev-tc09-02-prompt.png", "RUN-20260908-1156-dev/screenshots/agent-cmp-dev-tc09-03-after.png"],
+          note: "3개 모델(GPT/제미나이/클로드) 모두 지원 정확 답변; 출처 인용·되물음 없음",
+          run_id: "RUN-20260908-1156-dev", duration: "40s", in_tokens: "50.9k", out_tokens: "752" },
         { id: "TC-10", name: "수신자의 결재 단계 확인 가능 여부",         tag: "", status: "—" },
       ],
     },
@@ -52,9 +52,9 @@ window.QA_DATA = {
         { id: "TC-13", name: "메일 수신 불가 원인",                 tag: "", status: "—" },
         { id: "TC-14", name: "휴가 신청 위치 (초단문 질의)",           tag: "", status: "—" },
         { id: "TC-15", name: "AI 기능 자체에 대한 메타 질문",          tag: "", status: "PASS",
-          screenshots: ["RUN-20260908-1752-dev/screenshots/agent-cmp-dev-tc15-02-prompt.png", "RUN-20260908-1752-dev/screenshots/agent-cmp-dev-tc15-03-after.png", "RUN-20260908-1752-dev/screenshots/agent-cmp-dev-tc15-03b-after.png"],
-          note: "8개 영역+예시 나열, 매뉴얼 에이전트 정체성 미언급; 출처 인용·되물음 없음",
-          run_id: "RUN-20260908-1752-dev", duration: "32s", in_tokens: "24.4k", out_tokens: "572" },
+          screenshots: ["RUN-20260908-1156-dev/screenshots/agent-cmp-dev-tc15-02-prompt.png", "RUN-20260908-1156-dev/screenshots/agent-cmp-dev-tc15-03-after.png"],
+          note: "업무영역+예시질문 상세 안내; 정체성 미언급·출처 없음·되물음 없음",
+          run_id: "RUN-20260908-1156-dev", duration: "24s", in_tokens: "24.4k", out_tokens: "521" },
         { id: "TC-16", name: "대체휴무 등록 방법",                  tag: "", status: "—" },
         { id: "TC-17", name: "다크모드 설정 (초단문 질의)",            tag: "", status: "—" },
         { id: "TC-18", name: "휴가 결재 처리 기본값 설정",             tag: "", status: "—" },
@@ -64,7 +64,7 @@ window.QA_DATA = {
     },
     {
       id: "03-매뉴얼에이전트-Q21-30",
-      pass: 1,
+      pass: 0,
       total: 10,
       tcs: [
         { id: "TC-21", name: "서비스 해지 방법",                   tag: "", status: "—" },
@@ -74,10 +74,7 @@ window.QA_DATA = {
         { id: "TC-25", name: "직원 초대 방법",                    tag: "", status: "—" },
         { id: "TC-26", name: "출근하기 버튼 미동작",                 tag: "", status: "—" },
         { id: "TC-27", name: "전체공유 캘린더 공유대상 추가",            tag: "", status: "—" },
-        { id: "TC-28", name: "로그인 2단계 인증 해제",               tag: "", status: "PASS",
-          screenshots: ["RUN-20260908-1752-dev/screenshots/agent-cmp-dev-tc28-02-prompt.png", "RUN-20260908-1752-dev/screenshots/agent-cmp-dev-tc28-03-after.png"],
-          note: "5단계 가이드 카드 렌더; 본인/관리자 해제 구분, 출처 인용 없음",
-          run_id: "RUN-20260908-1752-dev", duration: "42s", in_tokens: "58.6k", out_tokens: "2.9k" },
+        { id: "TC-28", name: "로그인 2단계 인증 해제",               tag: "", status: "—" },
         { id: "TC-29", name: "조직명 변경 메뉴",                   tag: "", status: "—" },
         { id: "TC-30", name: "상신한 품의서 수정",                  tag: "", status: "—" },
       ],
@@ -90,50 +87,6 @@ window.QA_DATA = {
 
   // 최근 실행 이력 — 메인 Claude 가 RUN 종료 시 갱신
   history: [
-    {
-      run_id: "RUN-20260908-1752-dev",
-      date: "2026-09-08 18:05",
-      env: "dev",
-      target: "TC-09(01-Q01-10) · TC-15(02-Q11-20) · TC-28(03-Q21-30) 단독 재실행 (회차 3)",
-      pass: 3,
-      fail: 0,
-      status_class: "pass",
-      duration: "10m 29s",
-      note: "에이전트 O 부분 재실행. TC-09 Sonnet 5·사용자1 / TC-15 GPT 5.6 Terra·사용자2 / TC-28 Gemini 3.7 Flash·사용자3, TC 마다 새 대화. 3/3 응답 성립. TC-09 는 '내부 모델 조합 비공개 정책' 이라는 제3의 답변 패턴(회차1 되물음 → 회차2 3사 확답 → 회차3 비공개) — 비결정성 확인(wait 27s, in 46.9k). TC-15 8개 업무영역+예시, 정체성 미언급 재현(wait 32s, in 24.4k). TC-28 5단계 가이드 카드 + 관리자 강제 시 경로 구분, TC-20 과 중복 없음(wait 42s, in 58.6k). 출처 인용 0/3, 되물음 0건. 시나리오 파일 질문 문구는 직전 회차와 동일(변경 미저장 상태).",
-    },
-    {
-      run_id: "RUN-20260908-1304-prd",
-      date: "2026-09-08 13:18",
-      env: "prd",
-      target: "TC-21·22·25(03-Q21-30) 단독 재실행 (회차 2)",
-      pass: 3,
-      fail: 0,
-      status_class: "pass",
-      duration: "3m 21s",
-      note: "에이전트 X 부분 재실행. Gemini 3.7 Flash(새 대화 기본값)·사용자3. 3/3 응답 성립. TC-21 웹검색 7단계 사용(wait 53s). TC-22 표 위젯 없이 카드형, 본문에 이스케이프 안 된 개행 문자(백슬래시 n) 노출 흠(wait 36s). TC-25 라이선스 언급 없음(wait 42s). 출처 인용 0/3, 되물음 0건. 토큰 UI 미표시(null).",
-    },
-    {
-      run_id: "RUN-20260908-1304-dev",
-      date: "2026-09-08 13:11",
-      env: "dev",
-      target: "TC-21·22·25(03-Q21-30) 단독 재실행 (회차 2)",
-      pass: 3,
-      fail: 0,
-      status_class: "pass",
-      duration: "5m 42s",
-      note: "에이전트 O 부분 재실행. Gemini 3.7 Flash·사용자3, TC 마다 새 대화. 3/3 응답 성립. TC-21 해지 절차·환불 안내(wait 35s, in 32.8k). TC-22 표 위젯 헤더·4행 정상 렌더 — 직전 회차 '표 본문 미표시' 미재현(wait 66s, in 12.2k). TC-25 계정 직접등록 경로+라이선스 언급(wait 56s, in 32.5k). 출처 인용 0/3, 되물음 0건. 'AI 작업 과정'에 매뉴얼 에이전트 위임 문구 관찰.",
-    },
-    {
-      run_id: "RUN-20260908-1156-prd",
-      date: "2026-09-08 12:14",
-      env: "prd",
-      target: "TC-09(01-Q01-10) · TC-15(02-Q11-20) 단독 재실행 (회차 2)",
-      pass: 2,
-      fail: 0,
-      status_class: "pass",
-      duration: "7m 05s",
-      note: "에이전트 X 부분 재실행. TC-09 Sonnet 5·사용자1 / TC-15 GPT 5.6 Terra·사용자2. 2/2 응답 성립. TC-09 3사 모델 지원 정확 안내(wait 23s), 직전 회차에 있던 출처 링크 인용은 이번엔 없음(0/2). TC-15 정체성 언급 없음(wait 30s). 되물음 0건. 토큰 UI 미표시(null).",
-    },
     {
       run_id: "RUN-20260908-1156-dev",
       date: "2026-09-08 12:05",
