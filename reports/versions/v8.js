@@ -3,9 +3,9 @@
 
 window.QA_DATA = {
   meta: {
-    env: "prd",
-    run_id: "RUN-20260908-1821-prd",
-    updated_at: "2026-09-08 18:51",
+    env: "dev",
+    run_id: "RUN-20260908-1821-dev",
+    updated_at: "2026-09-08 18:36",
   },
 
   kpis: {
@@ -20,7 +20,7 @@ window.QA_DATA = {
     tc_count: 30,
   },
 
-  // 전체 시나리오·TC 카탈로그 (scenarios/01,02,03 전체 30 TC) + 이번 회차(RUN-20260908-1821-prd, TC-09·TC-15·TC-18·TC-28 단독 재실행 — 회차4 신 문항) 결과 오버레이. 이번 회차에 실행되지 않은 TC 는 status "—".
+  // 전체 시나리오·TC 카탈로그 (scenarios/01,02,03 전체 30 TC) + 이번 회차(RUN-20260908-1821-dev, TC-09·TC-15·TC-18·TC-28 단독 재실행 — 회차4 신 문항) 결과 오버레이. 이번 회차에 실행되지 않은 TC 는 status "—".
   scenarios: [
     {
       id: "01-매뉴얼에이전트-Q01-10",
@@ -36,9 +36,9 @@ window.QA_DATA = {
         { id: "TC-07", name: "일정 월간보기 섬네일 표시 항목 제어",        tag: "", status: "—" },
         { id: "TC-08", name: "결재선 외 열람부서 고정 설정",            tag: "", status: "—" },
         { id: "TC-09", name: "제미나이 3.1 Pro 사용량 정보 확인",       tag: "", status: "PASS",
-          screenshots: ["RUN-20260908-1821-prd/screenshots/agent-cmp-prd-tc09-02-prompt.png", "RUN-20260908-1821-prd/screenshots/agent-cmp-prd-tc09-03-after.png"],
-          note: "제미나이3.1pro 미확인 모델로 정직 교정; 사용량은 관리자페이지 안내, 출처링크 없음",
-          run_id: "RUN-20260908-1821-prd", duration: "27s" },
+          screenshots: ["RUN-20260908-1821-dev/screenshots/agent-cmp-dev-tc09-02-prompt.png", "RUN-20260908-1821-dev/screenshots/agent-cmp-dev-tc09-03-after.png"],
+          note: "제미나이3.1pro 미제공 정직 교정; 사용량표·확인경로 안내, 출처 없음",
+          run_id: "RUN-20260908-1821-dev", duration: "50s" },
         { id: "TC-10", name: "수신자의 결재 단계 확인 가능 여부",         tag: "", status: "—" },
       ],
     },
@@ -52,15 +52,15 @@ window.QA_DATA = {
         { id: "TC-13", name: "메일 수신 불가 원인",                 tag: "", status: "—" },
         { id: "TC-14", name: "휴가 신청 위치 (초단문 질의)",           tag: "", status: "—" },
         { id: "TC-15", name: "무료 버전·사용량 제한 메타 질문",          tag: "", status: "PASS",
-          screenshots: ["RUN-20260908-1821-prd/screenshots/agent-cmp-prd-tc15-02-prompt.png", "RUN-20260908-1821-prd/screenshots/agent-cmp-prd-tc15-03-after.png"],
-          note: "정체성 미노출·수치 단정 없이 관리자페이지 확인경로만 안내; 출처 없음",
-          run_id: "RUN-20260908-1821-prd", duration: "29s" },
+          screenshots: ["RUN-20260908-1821-dev/screenshots/agent-cmp-dev-tc15-02-prompt.png", "RUN-20260908-1821-dev/screenshots/agent-cmp-dev-tc15-03-after.png"],
+          note: "정체성 언급 없음, 수치 단정 없이 확인경로만 안내; 출처 인용 없음",
+          run_id: "RUN-20260908-1821-dev", duration: "30s" },
         { id: "TC-16", name: "대체휴무 등록 방법",                  tag: "", status: "—" },
         { id: "TC-17", name: "다크모드 설정 (초단문 질의)",            tag: "", status: "—" },
         { id: "TC-18", name: "휴가 신청서 처리자 기본 설정",            tag: "", status: "PASS",
-          screenshots: ["RUN-20260908-1821-prd/screenshots/agent-cmp-prd-tc18-02-prompt.png", "RUN-20260908-1821-prd/screenshots/agent-cmp-prd-tc18-03-after.png"],
-          note: "결재선관리 경로+관리자 자동지정 예외 안내; 출처 없음",
-          run_id: "RUN-20260908-1821-prd", duration: "34s" },
+          screenshots: ["RUN-20260908-1821-dev/screenshots/agent-cmp-dev-tc18-02-prompt.png", "RUN-20260908-1821-dev/screenshots/agent-cmp-dev-tc18-03-after.png"],
+          note: "개인 결재선 저장 vs 관리자 양식 처리결재선 수정 구분, 관리자 권한 명시",
+          run_id: "RUN-20260908-1821-dev", duration: "44s" },
         { id: "TC-19", name: "메일함 비밀번호 재설정 (명사 나열형 질의)",    tag: "", status: "—" },
         { id: "TC-20", name: "보안 OTP 사용 취소",                tag: "", status: "—" },
       ],
@@ -78,9 +78,9 @@ window.QA_DATA = {
         { id: "TC-26", name: "출근하기 버튼 미동작",                 tag: "", status: "—" },
         { id: "TC-27", name: "전체공유 캘린더 공유대상 추가",            tag: "", status: "—" },
         { id: "TC-28", name: "메일함 용량 확인 위치 (구어체 단문)",       tag: "", status: "PASS",
-          screenshots: ["RUN-20260908-1821-prd/screenshots/agent-cmp-prd-tc28-02-prompt.png", "RUN-20260908-1821-prd/screenshots/agent-cmp-prd-tc28-03-after.png"],
-          note: "개인 확인경로만 상세 안내; 관리자 전체용량 경로는 구체 언급 없음",
-          run_id: "RUN-20260908-1821-prd", duration: "30s" },
+          screenshots: ["RUN-20260908-1821-dev/screenshots/agent-cmp-dev-tc28-02-prompt.png", "RUN-20260908-1821-dev/screenshots/agent-cmp-dev-tc28-03-after.png"],
+          note: "관리자/일반 확인경로 정확 구분 안내; 출처 인용 없음",
+          run_id: "RUN-20260908-1821-dev", duration: "41s" },
         { id: "TC-29", name: "조직명 변경 메뉴",                   tag: "", status: "—" },
         { id: "TC-30", name: "상신한 품의서 수정",                  tag: "", status: "—" },
       ],
