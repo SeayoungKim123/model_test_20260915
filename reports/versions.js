@@ -2,8 +2,9 @@
 // 버전 1개 = 완료된 RUN 1개. 스냅샷 본체는 versions/vN.js (window.QA_DATA, data.js 와 동일 스키마).
 // dashboard.html 이 이 파일을 읽어 버전 선택기를 그리고, 선택 시 해당 versions/vN.js 를 로드한다.
 window.QA_VERSIONS = {
-  current: "v9",
+  current: "v10",
   list: [
+    { v: "v10", run_id: "RUN-20260915-1045-dev", env: "dev", date: "2026-09-15", file: "versions/v10.js" },
     { v: "v9", run_id: "RUN-20260908-1821-prd", env: "prd", date: "2026-09-08", file: "versions/v9.js" },
     { v: "v8", run_id: "RUN-20260908-1821-dev", env: "dev", date: "2026-09-08", file: "versions/v8.js" },
     { v: "v7", run_id: "RUN-20260908-1752-dev", env: "dev", date: "2026-09-08", file: "versions/v7.js" },
